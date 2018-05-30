@@ -12,6 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import pkg111mil_panaderia.vuelto.PresentadorVuelto;
+import pkg111mil_panaderia.vuelto.VistaVuelto;
 
 /**
  *
@@ -19,10 +21,12 @@ import javafx.stage.Stage;
  */
 public class UI extends Application implements ContratoControladorVistas{
     private Stage mainStage;
-    
+    private VistaVuelto vista= new VistaVuelto(this);
+
     @Override
     public void start(Stage primaryStage) {
         this.mainStage = primaryStage;
+        this.mainStage.setScene(this.vista.getEscena());
         //Lanzar primera vista
         this.mainStage.show();
     }
@@ -32,6 +36,7 @@ public class UI extends Application implements ContratoControladorVistas{
      */
     public static void main(String[] args) {
         launch(args);
+        
     }
     
 }
