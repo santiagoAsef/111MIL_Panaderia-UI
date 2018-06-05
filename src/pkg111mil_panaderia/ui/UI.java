@@ -20,7 +20,7 @@ import pkg111mil_panaderia.vuelto.VistaVuelto;
  * @author steve-urbit
  */
 public class UI extends Application implements ContratoControladorVistas{
-    private Stage mainStage;
+    private Stage mainStage ;
     private VistaVuelto vista= new VistaVuelto(this);
 
     @Override
